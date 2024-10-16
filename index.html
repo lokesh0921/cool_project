@@ -40,11 +40,19 @@
 
 
 <script>
+
+    let replied = false;
+    
     function reply(){
         document.getElementById("statement").innerHTML = "<h2>I Love You too &#x1F618<h2>"
+         replied = true;
     }
 
     function runButton(){
+       if(replied == true){
+            return;
+        }
+        
          const button = document.getElementById("b2");
 
          const randomX  = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
