@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+
+    <style>
+        #b2 {
+            position: absolute;
+            padding: 10px 20px;
+            background-color: indianred;
+            border: none;
+            cursor: none;
+            border-radius: 3px;
+            font-weight: bold;
+            color: rgb(240, 235, 236);
+        }
+
+    #b1 {
+        padding: 10px 20px;
+        background-color: greenyellow;
+        border: none;
+        margin-right: 10px;
+        border-radius: 3px;
+        margin-left: 35px;
+        font-weight: bold;
+        
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    
+
+  
+
+    </style>
+</head>
+
+
+<script>
+    function reply(){
+        document.getElementById("statement").innerHTML = "<h2>I Love You too &#x1F618<h2>"
+    }
+
+    function runButton(){
+         const button = document.getElementById("b2");
+
+         const randomX  = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+         const randomY  = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+
+
+         
+
+         button.style.left = randomX + 'px';
+         button.style.top = randomY + 'px';
+
+      
+
+    }
+</script>
+
+<body>
+    <br><br>
+
+        <div id="body">
+            <h2 style="display: flex; align-items: center; justify-content: center; color: rgb(63, 44, 44);">Do You Love Me &#x1F643 ?</h2>
+            <br>
+            <br>
+            
+            <div style="display: flex; align-items: center; justify-content: center; display: block;" >
+                <button  id="b1" onclick="reply()">yes</button>
+                <button id="b2" onmouseover="runButton()" >No</button>
+            </div>
+           
+
+            
+
+            <p style="display: flex; align-items: center; justify-content: center;" id="statement"></p>
+        </div>
+
+                  
+</body>
